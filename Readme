@@ -1,0 +1,14 @@
+Challenges Faced
+
+Early Research:
+1. Decided to use Vue over React
+2. Settting up Vue for the first time
+3. Choosing to use the ATOMIC Organizational Practice
+4. Deciding if I should use a database for login information
+4a. This conflicts with my idea of wanting to upload the website on github
+4b. Maybe I can use html5 storage? (need research)
+5. Deciding to use Bootstrap over Tailwind
+
+Implementation:
+1. Learning how to use bootstrap
+
