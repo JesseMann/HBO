@@ -1,17 +1,67 @@
+body {
+    background-color: #120c1d;
+}
+
+.heroImages {
+    min-height: 35vw;
+    text-transform: uppercase;
+    color: white;
+}
+
+.heroImages p, heroImages h3 {
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 0 0.6em #000;
+}
+
+.heroImages p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+.heroImages h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
 .hero-image1 {
     background-size: cover;
     background-position: center center;
-    background-image: ;
+    background-image: url("./assets/LP Hero Images/GOT BG Image.avif");
 }
 
 .hero-image2 {
     background-size: cover;
     background-position: center center;
-    background-image:;
+    background-image: url("./assets/LP Hero Images/Barbie BG Image.avif");;
 }
 
 .hero-image3 {
     background-size: cover;
     background-position: center center;
-    background-image: ;
+    background-image: url("assets/LP Hero Images/BasketBall BG Image.avif");;
+}
+
+.hero-title-logo {
+    max-width: 200px;
+}
+
+.HeroSection {
+    position: relative;
+}
+
+.text-center {
+    z-index: 1;
+}
+.HeroSection::after {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, .7) 25%, rgba(0, 0, 0, 0) 40%);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
 }
