@@ -88,6 +88,10 @@ body {
     z-index: 0;
 }
 
+.primaryCTA {
+    background-color: black;
+}
+
 .primaryCTA p {
     font-size: 1.70em;
 }
@@ -95,4 +99,28 @@ body {
 .ctaButton {
     align-self: center;
     font-size: 1rem;
+    z-index: 1;
+}
+
+#ctaButton2 {
+    padding: 13px 24px;
+}
+
+.barSplit {
+    background-color: black;
+}
+
+.barSplitContainer {
+    position: relative;
+}
+
+.barSplitContainer::after {
+    position: absolute;
+    bottom: calc(100% - 14vw);
+    height: 18vw;
+    content: "";
+    width: 100%;
+    background-size: cover;
+    background-image: url(/assets/img.svg);
+    background-color: black;
 }
