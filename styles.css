@@ -140,7 +140,133 @@ body {
     max-width: 82ch;
 }
 
+.genre-characters-Container {
+    overflow-x: auto;
+}
+
 .genre-characters {
     position: relative;
     z-index: 1;
+    min-width: 2040px;
+}
+
+.genre-characters1 {
+    background-image: url(/assets/GenreCharacters/1.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters2 {
+    background-image: url(/assets/GenreCharacters/2.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters3 {
+    background-image: url(/assets/GenreCharacters/3.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters4 {
+    background-image: url(/assets/GenreCharacters/4.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters5 {
+    background-image: url(/assets/GenreCharacters/5.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters6 {
+    background-image: url(/assets/GenreCharacters/6.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters7 {
+    background-image: url(/assets/GenreCharacters/7.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters8 {
+    background-image: url(/assets/GenreCharacters/8.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters9 {
+    background-image: url(/assets/GenreCharacters/9.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters10 {
+    background-image: url(/assets/GenreCharacters/10.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters11 {
+    background-image: url(/assets/GenreCharacters/11.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters12 {
+    background-image: url(/assets/GenreCharacters/12.avif);
+    background-position: top center;
+    background-size: cover;
+    height: 30vw;
+}
+
+.genre-characters .row .col p {
+    color: rgba(231, 231, 231, 0.8);
+    font-size: 0.6rem;
+    font-weight: 300;
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.genre-characters .row .col h4 {
+    color: rgba(231, 231, 231, 0.8);
+    line-height: 1.35;
+    font-weight: 600;
+    font-size: 1.25rem;
+    z-index: 1;
+}
+
+.genre-characters1::after,
+.genre-characters2::after,
+.genre-characters3::after,
+.genre-characters4::after,
+.genre-characters5::after,
+.genre-characters6::after,
+.genre-characters7::after,
+.genre-characters8::after,
+.genre-characters9::after,
+.genre-characters10::after,
+.genre-characters11::after,
+.genre-characters12::after {
+    background-image: linear-gradient(180deg, rgba(2, 43, 231, 0) 30%, rgba(2, 43, 231, 1) 95%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 8.3%;
 }
