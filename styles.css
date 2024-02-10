@@ -113,7 +113,6 @@ body {
 
 .barSplit {
     background-color: black;
-    padding: 50px 30px;
 }
 
 .barSplitContainer {
@@ -123,7 +122,7 @@ body {
 .barSplitContainer::after {
     position: absolute;
     bottom: calc(100% - 14vw);
-    height: 18vw;
+    height: 20vw;
     content: "";
     width: 100%;
     background-size: cover;
@@ -133,7 +132,8 @@ body {
 
 .genre h2 {
     z-index: 1;
-    font-size: 1.5rem;
+    font-size: 2.1875rem;
+    line-height: 1.35;
 }
 
 .genreContainer {
@@ -150,11 +150,33 @@ body {
     min-width: 2040px;
 }
 
+.coming-soon {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0px 5px 8px rgb(2, 43, 231, 0.7);
+    color: rgb(2, 43, 231);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 4px;
+}
+
 .genre-characters1 {
     background-image: url(/assets/GenreCharacters/1.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters2 {
@@ -162,6 +184,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters3 {
@@ -169,6 +199,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters4 {
@@ -176,6 +214,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters5 {
@@ -183,6 +229,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters6 {
@@ -190,6 +244,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters7 {
@@ -197,6 +259,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters8 {
@@ -204,6 +274,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters9 {
@@ -211,6 +289,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters10 {
@@ -218,6 +304,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters11 {
@@ -225,6 +319,14 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters12 {
@@ -232,20 +334,27 @@ body {
     background-position: top center;
     background-size: cover;
     height: 30vw;
+    border-left: 1px solid #022be7;
+    border-right: 1px solid #022be7;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    min-height: 360px;
+    min-width: 170px;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
 }
 
 .genre-characters .row .col p {
     color: rgba(231, 231, 231, 0.8);
     font-size: 0.6rem;
     font-weight: 300;
-    margin-top: 0.5em;
+    margin-top: 1em;
     text-transform: uppercase;
     z-index: 1;
     white-space: nowrap;
 }
 
 .genre-characters .row .col h4 {
-    color: rgba(231, 231, 231, 0.8);
     line-height: 1.35;
     font-weight: 600;
     font-size: 1.25rem;
