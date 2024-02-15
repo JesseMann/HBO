@@ -388,8 +388,43 @@ body {
     height: 100%;
 }
 
+.sportsLogoContainer {
+    padding-bottom: 1rem;
+    padding-top: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.sportsLogo {
+    font-weight: 600;
+    letter-spacing: .1em;
+    margin: 0 0 1rem 0;
+}
+
+.sportsLogo span {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
 .sportsImg1 {
     border-right: 3px solid #fff;
     margin: 0 .6em 0 0;
     padding: 0.25em 0.5em 0.25em 0;
+}
+
+.sportsImg2 {
+    margin-right: .3em;
+}
+
+.sportsPhotos .col img{
+    max-width: 100%;
+    height: auto;
+}
+
+.sportsLogoContainer small {
+    font-size: 65%;
+}
+
+.sportsLogoContainer small, .sportsLogoContainer p {
+    margin-bottom: 1rem;
 }
