@@ -1,6 +1,7 @@
 body {
     background-color: #120c1d;
     color: white;
+    background: url(/assets/bgImage.jpeg)0% 0% / 100% 100% fixed;
 }
 
 .fixed-top {
@@ -380,6 +381,10 @@ body {
     width: 8.3%;
 }
 
+.newMoviesContainer {
+    padding-bottom: 5%;
+}
+
 .newMovies {
     margin-top: 30px;
 }
@@ -388,11 +393,74 @@ body {
     height: 100%;
 }
 
+.sportsContainerPrimary {
+    position: relative;
+    padding-top: 3%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://beam-images.warnermediacdn.com/2023-09/sports-bg.jpg?host=wbd-dotcom-drupal-prd-us-east-1.s3.amazonaws.com&w=1920);
+    z-index: 2;
+}
+
+.sportsContainerPrimary::after {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 50%);
+    content: '';
+    bottom: 0;
+    height: 100%;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+
+.sportsLogoContainerPrimary {
+    position: relative;
+}
+
 .sportsLogoContainer {
     padding-bottom: 1rem;
     padding-top: 2.5rem;
     position: relative;
-    z-index: 2;
+
+}
+
+.sportsLogoCharacters {
+    position: absolute;
+    left: 50%;
+    top: -49%;
+    z-index: -1;
+}
+
+.sportsLogoCharacters img {
+    width: 90%;
+}
+
+.mainChar::before {
+    background-image: url(/assets/SportsPhotos/Character2.avif);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    right: 42%;
+    z-index: -3;
+}
+
+.mainChar::after {
+    background-image: url(/assets/SportsPhotos/Character3.avif);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 29%;
+    z-index: -3;
 }
 
 .sportsLogo {
