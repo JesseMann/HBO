@@ -84,6 +84,7 @@ body {
 .text-center {
     z-index: 1;
 }
+
 .HeroSection::after {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, .7) 25%, rgba(0, 0, 0, 0) 40%);
     bottom: 0;
@@ -402,12 +403,22 @@ body {
     z-index: 2;
 }
 
+
+.sportsContainerPrimary::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, 0) 60%);
+    z-index: -1;
+    content: '';
+    bottom: 0;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+}   
+
 .sportsContainerPrimary::after {
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 50%);
     content: '';
     bottom: 0;
     height: 100%;
-    left: calc(50% - 50vw);
     width: 100vw;
     position: absolute;
     z-index: -1;
@@ -495,4 +506,58 @@ body {
 
 .sportsLogoContainer small, .sportsLogoContainer p {
     margin-bottom: 1rem;
+}
+
+.biggestHitsContainerPrimary {
+    position: relative;
+}
+
+.biggestHitsContainer {
+    position: relative;
+}
+
+.biggestHitsImgContainer {
+        position: absolute;
+        left: 50%;
+        top: -25%;
+        z-index: 2;
+        padding-bottom: 2rem;
+ }
+
+.biggestHitsImg .col img{
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.biggestHitsText {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+    position: relative;
+    z-index: 2;
+}
+
+.biggestHitsText h3 {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+}
+
+.biggestHitsText h2 {
+    font-size: 4.5rem;
+}
+
+.biggestHitsText::after {
+    background-image: url(/assets/BiggestHits/featured\ img\ name.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    bottom: 1%;
+    filter: drop-shadow(3px 3px 3px #000);
+    height: 30%;
+    right: 0;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
 }
