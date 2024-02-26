@@ -510,13 +510,59 @@ body {
 
 .biggestHitsContainerPrimary {
     position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(assets/BiggestHits/Background\ Img.avif);
 }
 
-.biggestHitsContainer {
+.atHomeContainerPrimary {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(assets/atHome/bg\ img.avif);
+}
+
+.familyTimeContainerPrimary {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(assets/familyTime/bg\ img.avif);
+}
+
+.movieNightContainerPrimary {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(assets/movieNight/bg\ img.avif);
+}
+
+.biggestHitsContainer, .atHomeContainer, .familyTimeContainer, .movieNightContainer {
     position: relative;
 }
 
-.biggestHitsImgContainer {
+.biggestHitsContainer::before, .atHomeContainer::before, .familyTimeContainer::before, .movieNightContainer::before {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 60%);
+    content: '';
+    bottom: 0;
+    height: 100%;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    position: absolute;
+    z-index: 2;
+}
+
+.biggestHitsContainer::after, .atHomeContainer::after, .familyTimeContainer::after, .movieNightContainer::after {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 50%);
+    content: '';
+    bottom: 0;
+    height: 100%;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+}
+
+.biggestHitsImgContainer, .atHomeImgContainer, .familyTimeImgContainer, .movieNightImgContainer {
         position: absolute;
         left: 50%;
         top: -25%;
@@ -524,31 +570,76 @@ body {
         padding-bottom: 2rem;
  }
 
-.biggestHitsImg .col img{
+.biggestHitsImg .col img, .atHomeImg .col img, .familyTimeImg .col img, .movieNightImg .col img{
     position: relative;
     max-width: 100%;
     height: auto;
-    z-index: 2;
+    z-index: 3;
 }
 
-.biggestHitsText {
+.biggestHitsText, .atHomeText, .familyTimeText, .movieNightText {
     padding-bottom: 6rem;
     padding-top: 6rem;
     position: relative;
     z-index: 2;
 }
 
-.biggestHitsText h3 {
+.biggestHitsText h3, .atHomeText h3, .familyTimeText h3, .movieNightText h3{
     font-size: 1.75rem;
     text-transform: capitalize;
 }
 
-.biggestHitsText h2 {
+.biggestHitsText h2, .atHomeText h2, .familyTimeText h2, .movieNightText h2{
     font-size: 4.5rem;
 }
 
 .biggestHitsText::after {
     background-image: url(/assets/BiggestHits/featured\ img\ name.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    bottom: 1%;
+    filter: drop-shadow(3px 3px 3px #000);
+    height: 30%;
+    right: 0;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.atHomeText::after {
+    background-image: url(/assets/atHome/logo.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    bottom: 1%;
+    filter: drop-shadow(3px 3px 3px #000);
+    height: 30%;
+    right: 0;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.familyTimeText::after {
+    background-image: url(/assets/familyTime/featured\ img.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    bottom: 1%;
+    filter: drop-shadow(3px 3px 3px #000);
+    height: 30%;
+    right: 0;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.movieNightText::after {
+    background-image: url(/assets/movieNight/featured\ img.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
