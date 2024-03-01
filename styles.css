@@ -656,6 +656,19 @@ body {
 .bestInText h2 {
     text-transform: uppercase;
     font-size: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.genre-carousel-container {
+    max-width: 1140px;
+}
+
+.carousel-indicators {
+    list-style: none;
+    overflow: scroll;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    bottom: 100%;
 }
 
 .carousel-indicators li {
@@ -669,4 +682,20 @@ body {
     font-weight: 100;
     opacity: 0.5;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.carousel-indicators li:first-child {
+    margin-left: 500px;
+}
+
+.carousel-indicators li:last-child::after {
+    position: absolute;
+    content: '';
+    width: 500px;
+    height: 100%;
+}
+
+.slide {
+    overflow: visible !important;
 }
