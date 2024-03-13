@@ -15,5 +15,7 @@ Implementation:
 3. Practice using pseudo elements
 4. Working with manually positioned images
 5. Building a Carousel
+--Read js function for the centering animation on the carousel
+--animate in the carousel images. I'll probably need to review how HBO is doing this in javascript.
 
 

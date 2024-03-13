@@ -664,25 +664,43 @@ body {
 }
 
 .carousel-indicators {
+    position: absolute;
     list-style: none;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     justify-content: flex-start;
-    bottom: 100%;
+    bottom: 96%;
+    mask-image: linear-gradient(to right, transparent 0%, black 20% 80%, transparent 100%);
+    transition: 4s ease-in-out;
 }
 
+.carousel-inner .col-4 {
+    padding: 8px;
+}
+ 
 .carousel-indicators li {
     text-indent: 0 !important;
     color: white;
     background-color: transparent !important;
     width: auto !important;
     height: auto !important;
-    padding: 0 3.5rem;
+    padding: 0 3.5rem!important;
     font-size: 3.5rem;
     font-weight: 100;
     opacity: 0.5;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
+}
+
+.carousel-indicators .active {
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+}
+
+.carousel-indicators li::active {
+    transition: all 0.4s ease-in-out;
 }
 
 .carousel-indicators li:first-child {
@@ -696,6 +714,40 @@ body {
     height: 100%;
 }
 
+.carousel-inner {
+    transition: .8s ease-in-out!important;
+}
+
 .slide {
     overflow: visible !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top:-33.5rem;
+}
+
+.carousel-item col-4{
+    animation: all .1 ease-out;
+}
+
+@keyframes animateIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateX(15px);
+    }
+    25% {
+      opacity: 1;
+      transform: scale(0.95) translateX(15px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0px);
+    }
+  }
+  
+.img-anim-in {
+    animation-name: animateIn;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
 }
