@@ -16,4 +16,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Call the function on page load
   centerActiveIndicator();
+
+  // Function to fadeOut the inactive carousel slides
+  function fadeOutActive() {
+    var activeCarousel = document.querySelector('.carousel-inner .carousel-item.active');
+    if (activeCarousel) {
+      activeCarousel.classList.add("img-anim-out");
+      setTimeout(function () {
+        activeCarousel.classList.remove("img-anim-out");
+      }, 1000); // Delay for removing the fade-out class, adjust as needed
+    }
+  };
+
+  // Call the function when the slide has moved left
+  document.getElementById('carouselExampleControls').addEventListener('slide.bs.carousel', function (event) {
+    if (event.direction === "left") {
+      fadeOutActive();
+    }
+  });
+
+  // Call the function when the slide has moved right
+  document.getElementById('carouselExampleControls').addEventListener('slide.bs.carousel', function (event) {
+    if (event.direction === "right") {
+      fadeOutActive();
+    }
+  });
+
 });

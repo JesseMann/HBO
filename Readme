@@ -15,7 +15,20 @@ Implementation:
 3. Practice using pseudo elements
 4. Working with manually positioned images
 5. Building a Carousel
---Read js function for the centering animation on the carousel
---animate in the carousel images. I'll probably need to review how HBO is doing this in javascript.
+--animate out for non active elements javascript
+--
+
+if slide.bs.carousel (event fired when slide is activated) and event direction is right, then
+active .img-anim-out class for the element before it
+
+if slide.bs.carousel (event fired when slide is activated) and event direction is left, then
+activate .img-anim-out class for the element after it
 
 
+add the img out class to the element before the active carousel item
+
+If the carousel moves left, fire function
+If the carousel moves right, fire function
+Do this by adding the slide carousel hook Direction
+The function may have some confusion about how to add a class.
+- If that's the case, we'll need to debug
