@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // Call the function on page load
   centerActiveIndicator();
 
-  // Function to fadeOut the inactive carousel slides
+  // Function to fadeOut the newly inactive carousel slides
   function fadeOutActive() {
     var activeCarousel = document.querySelector('.carousel-inner .carousel-item.active');
     if (activeCarousel) {
       activeCarousel.classList.add("img-anim-out");
       setTimeout(function () {
         activeCarousel.classList.remove("img-anim-out");
-      }, 1000); // Delay for removing the fade-out class, adjust as needed
+      }, 1000); // Delay for removing the fade-out class
     }
   };
 
