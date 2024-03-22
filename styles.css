@@ -786,3 +786,12 @@ body {
 .pricing {
     background-color: rgb(0, 43, 231);
 }
+
+.fish {
+    display: block !important;
+    padding: 1.25em 1.5em;
+    border-radius: 0.25em !important;
+    text-align: center;
+    background: #FFF;
+    color: black;
+}
