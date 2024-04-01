@@ -787,11 +787,114 @@ body {
     background-color: rgb(0, 43, 231);
 }
 
-.fish {
-    display: block !important;
+.pricingCard {
     padding: 1.25em 1.5em;
     border-radius: 0.25em !important;
-    text-align: center;
+    text-align: left;
     background: #FFF;
     color: black;
+    max-width: 32%;
+}
+
+.pricingCard li{
+    list-style: none;
+}
+
+.pricingCards1 ul{
+    min-height: 135px;
+}
+
+.pricingCards1 h5 {
+    margin-top: 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    color: rgba(0, 0, 0, .6);
+}
+
+.sportsBG {
+    position: relative;
+    z-index: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sportsBG ul {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.sportsBG::before{
+    content: '';
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    right: -1.5em;
+    bottom: 0;
+    z-index: -1;
+    width: calc(100% + 3em);
+    height: 100%;
+    background-color: #DEEBFE;
+}
+
+.iconStatement, .iconStatement2, .iconStatement3, .iconStatement4 {
+    position: relative;
+    display: block;
+}
+
+.iconStatement::before {
+    position: absolute;
+    background-image: url(/assets/Pricing/checkmark.svg);
+    content: " ";
+    width: 1em;
+    height: 1em;
+    left: -8%;
+    top: 18%
+}
+
+.iconStatement2::before {
+    position: absolute;
+    background-image: url(/assets/Pricing/computer.svg);
+    content: " ";
+    width: 1em;
+    height: 1em;
+    left: -8%;
+    top: 18%
+}
+
+
+.iconStatement3::before {
+    position: absolute;
+    background-image: url(/assets/Pricing/download.svg);
+    content: " ";
+    width: 1em;
+    height: 1em;
+    left: -8%;
+    top: 18%
+}
+
+
+.iconStatement4::before {
+    position: absolute;
+    background-image: url(/assets/Pricing/headphones.svg);
+    content: " ";
+    width: 1em;
+    height: 1em;
+    left: -8%;
+    top: 18%
+}
+
+.ppm {
+    padding: 0.75rem;
+    margin: 0!important;
+}
+
+.pricingCard .row {
+    padding-top: 1rem;
+}
+
+.pricingCard .row a {
+    padding: 0.75rem;
+    margin-right: .75rem;
+    --bs-btn-padding-x: 0rem!important;
+    --bs-btn-padding-y: 0rem!important;
 }
