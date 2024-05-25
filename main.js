@@ -43,3 +43,37 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var monthlyRadioButton = document.getElementById("tab-monthly");
+  var yearlyRadioButton = document.getElementById("tab-yearly");
+  
+  // Function to handle changes in the radio button state
+  function changeStates() {
+    var yearElements = document.querySelectorAll('[id^="year"]');
+    var monthElements = document.querySelectorAll('[id^="month"]');
+    
+    if (monthlyRadioButton.checked) {
+      yearElements.forEach(element => {
+        element.style.display = 'none';
+      });
+      monthElements.forEach(element => {
+        element.style.display = 'block';
+      });
+    } else {
+      monthElements.forEach(element => {
+        element.style.display = 'none';
+      });
+      yearElements.forEach(element => {
+        element.style.display = 'block';
+      });
+    }
+  }
+
+  // Call the changeStates function
+  changeStates();
+
+  // Add event listener to the radio button to handle changes
+  monthlyRadioButton.addEventListener('change', changeStates);
+  yearlyRadioButton.addEventListener('change', changeStates);
+});
