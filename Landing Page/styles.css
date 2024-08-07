@@ -1,7 +1,7 @@
 body {
     background-color: #120c1d;
     color: white;
-    background: url(/assets/bgImage.jpeg)0% 0% / 100% 100% fixed;
+    background: url(/Landing\ Page/assets/bgImage.jpeg)0% 0% / 100% 100% fixed;
     overflow-x: hidden;
 }
 
@@ -58,19 +58,19 @@ body {
 .hero-image1 {
     background-size: cover;
     background-position: center center;
-    background-image: url("./assets/LP Hero Images/GOT BG Image.avif");
+    background-image: url("/Landing\ Page/assets/LP Hero Images/GOT BG Image.avif");
 }
 
 .hero-image2 {
     background-size: cover;
     background-position: center center;
-    background-image: url("./assets/LP Hero Images/Barbie BG Image.avif");;
+    background-image: url("/Landing\ Page/assets/LP Hero Images/Barbie BG Image.avif");;
 }
 
 .hero-image3 {
     background-size: cover;
     background-position: center center;
-    background-image: url("assets/LP Hero Images/BasketBall BG Image.avif");;
+    background-image: url("/Landing\ Page/assets/LP Hero Images/BasketBall BG Image.avif");;
 }
 
 .hero-title-logo {
@@ -129,7 +129,7 @@ body {
     content: "";
     width: 100%;
     background-size: cover;
-    background-image: url(/assets/img.svg);
+    background-image: url(/Landing\ Page/assets/img.svg);
     background-color: black;
 }
 
@@ -168,7 +168,7 @@ body {
 }
 
 .genre-characters1 {
-    background-image: url(/assets/GenreCharacters/1.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/1.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -183,7 +183,7 @@ body {
 }
 
 .genre-characters2 {
-    background-image: url(/assets/GenreCharacters/2.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/2.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -198,7 +198,7 @@ body {
 }
 
 .genre-characters3 {
-    background-image: url(/assets/GenreCharacters/3.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/3.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -213,7 +213,7 @@ body {
 }
 
 .genre-characters4 {
-    background-image: url(/assets/GenreCharacters/4.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/4.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -228,7 +228,7 @@ body {
 }
 
 .genre-characters5 {
-    background-image: url(/assets/GenreCharacters/5.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/5.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -243,7 +243,7 @@ body {
 }
 
 .genre-characters6 {
-    background-image: url(/assets/GenreCharacters/6.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/6.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -258,7 +258,7 @@ body {
 }
 
 .genre-characters7 {
-    background-image: url(/assets/GenreCharacters/7.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/7.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -273,7 +273,7 @@ body {
 }
 
 .genre-characters8 {
-    background-image: url(/assets/GenreCharacters/8.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/8.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -288,7 +288,7 @@ body {
 }
 
 .genre-characters9 {
-    background-image: url(/assets/GenreCharacters/9.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/9.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -303,7 +303,7 @@ body {
 }
 
 .genre-characters10 {
-    background-image: url(/assets/GenreCharacters/10.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/10.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -318,7 +318,7 @@ body {
 }
 
 .genre-characters11 {
-    background-image: url(/assets/GenreCharacters/11.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/11.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -333,7 +333,7 @@ body {
 }
 
 .genre-characters12 {
-    background-image: url(/assets/GenreCharacters/12.avif);
+    background-image: url(/Landing\ Page/assets/GenreCharacters/12.avif);
     background-position: top center;
     background-size: cover;
     height: 30vw;
@@ -448,7 +448,7 @@ body {
 }
 
 .mainChar::before {
-    background-image: url(/assets/SportsPhotos/Character2.avif);
+    background-image: url(/Landing\ Page/assets/SportsPhotos/Character2.avif);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -462,7 +462,7 @@ body {
 }
 
 .mainChar::after {
-    background-image: url(/assets/SportsPhotos/Character3.avif);
+    background-image: url(/Landing\ Page/assets/SportsPhotos/Character3.avif);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -513,28 +513,28 @@ body {
     position: relative;
     background-size: cover;
     background-position: center center;
-    background-image: url(assets/BiggestHits/Background\ Img.avif);
+    background-image: url(/Landing\ Page/assets/BiggestHits/Background\ Img.avif);
 }
 
 .atHomeContainerPrimary {
     position: relative;
     background-size: cover;
     background-position: center center;
-    background-image: url(assets/atHome/bg\ img.avif);
+    background-image: url(/Landing\ Page/assets/atHome/bg\ img.avif);
 }
 
 .familyTimeContainerPrimary {
     position: relative;
     background-size: cover;
     background-position: center center;
-    background-image: url(assets/familyTime/bg\ img.avif);
+    background-image: url(/Landing\ Page/assets/familyTime/bg\ img.avif);
 }
 
 .movieNightContainerPrimary {
     position: relative;
     background-size: cover;
     background-position: center center;
-    background-image: url(assets/movieNight/bg\ img.avif);
+    background-image: url(/Landing\ Page/assets/movieNight/bg\ img.avif);
 }
 
 .biggestHitsContainer, .atHomeContainer, .familyTimeContainer, .movieNightContainer {
@@ -595,7 +595,7 @@ body {
 }
 
 .biggestHitsText::after {
-    background-image: url(/assets/BiggestHits/featured\ img\ name.avif);
+    background-image: url(/Landing\ Page/assets/BiggestHits/featured\ img\ name.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -610,7 +610,7 @@ body {
 }
 
 .atHomeText::after {
-    background-image: url(/assets/atHome/logo.avif);
+    background-image: url(/Landing\ Page/assets/atHome/logo.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -625,7 +625,7 @@ body {
 }
 
 .familyTimeText::after {
-    background-image: url(/assets/familyTime/featured\ img.avif);
+    background-image: url(/Landing\ Page/assets/familyTime/featured\ img.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -640,7 +640,7 @@ body {
 }
 
 .movieNightText::after {
-    background-image: url(/assets/movieNight/featured\ img.avif);
+    background-image: url(/Landing\ Page/assets/movieNight/featured\ img.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -902,7 +902,7 @@ body {
 
 .iconStatement::before {
     position: absolute;
-    background-image: url(/assets/Pricing/checkmark.svg);
+    background-image: url(/Landing\ Page/assets/Pricing/checkmark.svg);
     content: " ";
     width: 1em;
     height: 1em;
@@ -912,7 +912,7 @@ body {
 
 .iconStatement2::before {
     position: absolute;
-    background-image: url(/assets/Pricing/computer.svg);
+    background-image: url(/Landing\ Page/assets/Pricing/computer.svg);
     content: " ";
     width: 1em;
     height: 1em;
@@ -923,7 +923,7 @@ body {
 
 .iconStatement3::before {
     position: absolute;
-    background-image: url(/assets/Pricing/download.svg);
+    background-image: url(/Landing\ Page/assets/Pricing/download.svg);
     content: " ";
     width: 1em;
     height: 1em;
@@ -934,7 +934,7 @@ body {
 
 .iconStatement4::before {
     position: absolute;
-    background-image: url(/assets/Pricing/headphones.svg);
+    background-image: url(/Landing\ Page/assets/Pricing/headphones.svg);
     content: " ";
     width: 1em;
     height: 1em;
