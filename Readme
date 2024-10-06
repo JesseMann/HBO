@@ -16,3 +16,11 @@ Implementation:
 4. Working with manually positioned images
 5. Building a Carousel
 6. Project Management (ended up used github "projects")
+
+Implementation:
+1. Choosing Vue CLI setup over NPM-direct setup and CDN setup.
+2. Learning about routers
+3. Learning about local styles (scoped), vs global styles, vs module styles. Chose local styles.
+4. Learning about props
+5. Learning about retrieve data via API to use dynamically
+
