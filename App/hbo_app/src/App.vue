@@ -31,10 +31,10 @@
   padding-bottom: 20px;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   width: 100%;
   top: 0px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .nav-logo {
@@ -79,6 +79,7 @@
   margin-left: 16px;
   margin-right: 16px;
   font-size: 18px;
+  font-family: system-ui;
   font-weight: 700;
   padding-bottom: 2.5px;
   border-bottom: 2px solid transparent;
@@ -117,5 +118,30 @@
   color: white!important;
   opacity: 1;
 }
+.nav-main.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color .1s ease;
+}
 
 </style>
+
+<script>
+export default {
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+
+  methods: {
+    handleScroll() {
+      const triggerHeight = window.innerHeight * 0.8;
+      const navbar = document.querySelector(".nav-main");
+
+      if (window.scrollY > triggerHeight) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+  }
+}
+</script>

@@ -1,6 +1,14 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import MoviesView from '@/views/MoviesView.vue';
+
 
 const routes = [
+  {
+    path: '/movie/:movieID',
+    name: 'MoviesView',
+    component: MoviesView,
+    props: true
+  },
   {
     path: '/',
     name: 'home',
