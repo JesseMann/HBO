@@ -2,40 +2,38 @@
   <div class="carousel">
     <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div
-        v-for="(movie, index) in movies"
-        :key="movie.movieID"
+        v-for="(tv, index) in slicedCarouselData"
+        :key="tv.tvID"
         class="carousel-item"
         :class="{ active: index === currentIndex }"
-        :style="{ backgroundImage: `url(${movie.imageUrl})` }"
+        :style="{ backgroundImage: `url(${tv.imageUrl})` }"
       >
         <div class="container">
           <iframe
-            v-if="movie.trailerUrl && showVideo && currentIndex === index"
+            v-if="slicedCarouselData[currentIndex].trailerUrl && showVideo"
             class="responsive-iframe"
-            :src="movie.trailerUrl"
+            :src="slicedCarouselData[currentIndex].trailerUrl"
             frameborder="0"
             allow="autoplay; encrypted-media"
             scrolling="no"
           ></iframe>
-      </div>
+        </div>
       </div>
     </div>
 
-    <div class="heroOverview" v-if="movies.length" >
-      <img :src="movies[currentIndex].logoUrl" alt="Movie Logo" v-if="movies[currentIndex].logoUrl">
-      <div class="date">Released: {{ movies[currentIndex].movieDate }}</div>
-      <div class="description">{{ movies[currentIndex].movieOverview }}</div>
-      <button @click="goToMoviePage(movies[currentIndex].movieID)">Go To Movie</button>
+    <div class="heroOverview" v-if="slicedCarouselData.length">
+      <img :src="slicedCarouselData[currentIndex]?.logoUrl" v-if="slicedCarouselData[currentIndex]?.logoUrl">
+      <div class="date">First Aired: {{ slicedCarouselData[currentIndex].tvDate }}</div>
+      <div class="description">{{ slicedCarouselData[currentIndex].tvOverview }}</div>
+      <button @click="goToTVPage(slicedCarouselData[currentIndex].tvID)">Go To Series</button>
     </div>
 
     <div class="chevron prev-chevron" @click="prevSlide">
-      <!-- Left Chevron Icon -->
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#BABABA" viewBox="0 0 24 24">
         <path d="M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6z"/>
       </svg>
     </div>
     <div class="chevron next-chevron" @click="nextSlide">
-      <!-- Right Chevron Icon -->
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#BABABA" viewBox="0 0 24 24">
         <path d="M8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6-6-6z"/>
       </svg>
@@ -43,14 +41,13 @@
 
     <div class="carousel-indicators">
       <span
-        v-for="(movie, index) in movies"
+        v-for="(tv, index) in slicedCarouselData"
         :key="index"
         :class="{ active: index === currentIndex }"
         @click="goToSlide(index)"
         class="indicator-bubble"
       ></span>
     </div>
-
 
   </div>
 </template>
@@ -278,9 +275,15 @@
 <script>
   export default {
   props: {
-    movies: {
+    heroTVCarousel: {
       type: Array,
       required: true,
+    },
+  },
+
+  computed: {
+    slicedCarouselData() {
+      return this.heroTVCarousel.slice(0, 5);
     },
   },
 
@@ -299,12 +302,12 @@
 
   methods: {
     prevSlide() {
-      this.currentIndex = (this.currentIndex - 1 + this.movies.length) % this.movies.length;
+      this.currentIndex = (this.currentIndex - 1 + this.slicedCarouselData.length) % this.slicedCarouselData.length;
       this.resetVideoTimer();
     },
 
     nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.movies.length;
+      this.currentIndex = (this.currentIndex + 1) % this.slicedCarouselData.length;
       this.resetVideoTimer();
     },
 
@@ -313,7 +316,7 @@
       if (this.videoDurationTimeout) clearTimeout(this.videoDurationTimeout);
 
       this.videoTimeout = setTimeout(() => {
-        if (this.movies[this.currentIndex].trailerUrl) {
+        if (this.slicedCarouselData[this.currentIndex].trailerUrl) {
           this.showVideo = true;
 
           this.videoDurationTimeout = setTimeout(() => {
@@ -330,8 +333,8 @@
       this.startVideoTimer();
     },
 
-    goToMoviePage(movieID) {
-      this.$router.push({ name: 'MoviesView', params: { movieID } });
+    goToTVPage(tvID) {
+      this.$router.push({ name: 'DynamicSeriesView', params: { tvID } });
     },
 
     goToSlide(index) {

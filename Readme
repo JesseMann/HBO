@@ -23,4 +23,10 @@ Implementation:
 3. Learning about local styles (scoped), vs global styles, vs module styles. Chose local styles.
 4. Learning about props
 5. Learning about retrieve data via API to use dynamically
+6. Learning about carousel sliding
+7. Learning about file naming and management
+
+Future To Dos
+1. Minimize number of service files; make less files and have them be more re-usable
+2. Update Load Time of images
 

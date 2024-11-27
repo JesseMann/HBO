@@ -1,15 +1,15 @@
 <template>
   <div class="carousel">
     <div class="sectionName">
-      <img src="@/assets/Top10Images/Top10.webp" class="top10-image" />
+      <img src="@/assets/Top10Images/Top10Series.webp" class="top10-image" />
     </div>
       <div class="carousel-inner">     
         <div
-          v-for="(movie, index) in bigScreenCarousel"
-          :key="movie.movieID"
+          v-for="(tvShow, index) in top10TVCarousel.slice(0, 10)"
+          :key="tvShow.tvID"
           class="carousel-item"
-          :style="{ backgroundImage: `url(${movie.imageUrl})` }"
-          @click="goToMoviePage(movie.movieID)"
+          :style="{ backgroundImage: `url(${tvShow.imageUrl})` }"
+          @click="goToSeriesPage(tvShow.tvID)"
           @mouseover="hoverIndex = index"
           @mouseleave="hoverIndex = null"
         >
@@ -60,9 +60,14 @@
   justify-content: space-between;
   padding-bottom: 20px;
   padding-left: 120px;
+  padding-right: 60px;
   padding-top: 16px;
   gap: 100px;
   overflow-x: auto;
+}
+
+.carousel-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-item {
@@ -165,7 +170,7 @@
 <script>
 export default {
   props: {
-    bigScreenCarousel: {
+    top10TVCarousel: {
       type: Array,
       required: true,
     },
@@ -203,8 +208,8 @@ export default {
   },
 
 methods: {
-  goToMoviePage(movieID) {
-    this.$router.push({ name: 'MoviesView', params: { movieID } });
+  goToSeriesPage(tvID) {
+    this.$router.push({ name: 'DynamicSeriesView', params: { tvID } });
   },
 
   prevSlide() {

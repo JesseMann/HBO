@@ -7,7 +7,7 @@ async function fetchPopularMovies() {
     `https://api.themoviedb.org/3/movie/popular?api_key=cfd0f90ef11421b744113aec2cdad0fe`
   );
   const data = await response.json();
-  return data.results.slice(0, 5); 
+  return data.results; 
 }
 
 async function fetchMovieTrailer(movieId) {

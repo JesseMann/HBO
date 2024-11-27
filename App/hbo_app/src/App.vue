@@ -2,20 +2,16 @@
   <nav class="nav-main">
     <div class="nav-logo">
       <div>
-        <img src="@/assets/NavBarIcons/maxLogo.webp">
+        <router-link to="/home" class="nav-item-children"><img src="@/assets/NavBarIcons/maxLogo.webp"></router-link>
       </div>
     </div>
     <div class="nav-items">
-      <router-link to="/" class="nav-item-children">Home</router-link>
-      <router-link to="/series" class="nav-item-children">Series</router-link>
       <router-link to="/movies" class="nav-item-children">Movies</router-link>
-      <router-link to="/hbo" class="nav-item-children"><img src="@/assets/NavBarIcons/hbo.webp"></router-link>
-      <router-link to="/sports" class="nav-item-children"><img src="@/assets/NavBarIcons/B:R.webp">Sports</router-link>
-      <router-link to="/news" class="nav-item-children">News<img src="@/assets/NavBarIcons/beta.webp"></router-link> 
+      <router-link to="/home" class="nav-item-children"><img src="@/assets/NavBarIcons/hbo.webp"></router-link>
+      <router-link to="/series" class="nav-item-children">Series</router-link>
     </div>
     <div class="nav-items-advanced">
       <img src="@/assets/NavBarIcons/SearchIcon.webp">
-      <img src="@/assets/NavBarIcons/Favorite.webp">
       <img src="@/assets/NavBarIcons/User.webp">
     </div>
   </nav>
@@ -35,6 +31,7 @@
   width: 100%;
   top: 0px;
   z-index: 5;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); 
 }
 
 .nav-logo {
@@ -85,19 +82,7 @@
   border-bottom: 2px solid transparent;
 }
 
-.nav-item-children:nth-child(4) img {
-  height: 34px;
-  opacity: 0.8;
-}
-
-.nav-item-children:nth-child(5) img {
-  margin-right: 4px;
-  height: 34px;
-  opacity: 0.8;
-}
-
-.nav-item-children:nth-child(6) img {
-  margin-left: 4px;
+.nav-item-children:nth-child(2) img {
   height: 34px;
   opacity: 0.8;
 }
