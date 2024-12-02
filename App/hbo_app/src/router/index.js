@@ -29,6 +29,16 @@ const routes = [
     path: '/series',
     name: 'series',
     component: () => import('../views/SeriesView.vue')
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: () => import('../views/ProfileView.vue'),
+  },
+  { path: '/search', 
+    name: 'search', 
+    component: () => import('../views/SearchView.vue'),
+
   }
 ]
 

@@ -15,7 +15,6 @@
         :is="getActiveComponent()"
         v-bind="tabData[activeTab]" 
       />
-
     </div>
   </div>
 </template>

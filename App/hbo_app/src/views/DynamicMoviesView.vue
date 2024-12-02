@@ -78,7 +78,6 @@ export default {
 
 
 <style scoped>
-@import '@/assets/styles/global basic.css';
 
 .home {
   opacity: 0;

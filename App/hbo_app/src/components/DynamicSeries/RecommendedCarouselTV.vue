@@ -1,13 +1,13 @@
 <template>
   <div class="carousel">
     <div class="sectionName"></div>
-    <div class="carousel-inner">     
+    <div class="carousel-inner">
       <div
-        v-for="movie in recommendedMovieCarousel"
-        :key="movie.movieID"
+        v-for="tv in recommendedTVCarousel"
+        :key="tv.tvID"
         class="carousel-item"
-        :style="{ backgroundImage: `url(${movie.imageUrl})` }"
-        @click="goToMoviePage(movie.movieID)"
+        :style="{ backgroundImage: `url(${tv.imageUrl})` }"
+        @click="goToTVPage(tv.tvID)"
       >
       </div>
     </div>
@@ -23,6 +23,53 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    recommendedTVCarousel: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    goToTVPage(tvID) {
+      this.$router.push({ name: 'DynamicSeriesView', params: { tvID } });
+    },
+    prevSlide() {
+      const carouselInner = this.$el.querySelector('.carousel-inner');
+      const itemWidth = window.innerWidth;
+
+      if (carouselInner.scrollLeft === 0) {
+        setTimeout(() => {
+          carouselInner.scrollTo({
+            left: carouselInner.scrollWidth - carouselInner.clientWidth,
+            behavior: 'smooth',
+          });
+        }, 200);
+      } else {
+        carouselInner.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+      }
+    },
+    nextSlide() {
+      const carouselInner = this.$el.querySelector('.carousel-inner');
+      const itemWidth = window.innerWidth;
+      const maxScrollLeft = carouselInner.scrollWidth - carouselInner.clientWidth;
+
+      if (carouselInner.scrollLeft >= maxScrollLeft) {
+        setTimeout(() => {
+          carouselInner.scrollTo({
+            left: 0,
+            behavior: 'smooth',
+          });
+        }, 200);
+      } else {
+        carouselInner.scrollBy({ left: itemWidth, behavior: 'smooth' });
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .carousel {
@@ -130,62 +177,3 @@
 }
 
 </style>
-
-<script>
-export default {
-  props: {
-    recommendedMovieCarousel: {
-      type: Array,
-      required: true,
-    },
-  },
-
-  data() {
-  return {
-    currentIndex: 0,
-  };
-},
-
-methods: {
-  goToMoviePage(movieID) {
-    this.$router.push({ name: 'DynamicMoviesView', params: { movieID } });
-  },
-
-  prevSlide() {
-    const carouselInner = this.$el.querySelector('.carousel-inner');
-    const itemWidth = window.innerWidth;
-    
-    
-    if (carouselInner.scrollLeft === 0) {
-      setTimeout(() => {
-        carouselInner.scrollTo({
-          left: carouselInner.scrollWidth - carouselInner.clientWidth,
-          behavior: 'smooth'
-        });
-      }, 200);
-    } else {
-      carouselInner.scrollBy({ left: -itemWidth, behavior: 'smooth' });
-    }
-  },
-
-  nextSlide() {
-    const carouselInner = this.$el.querySelector('.carousel-inner');
-    const itemWidth = window.innerWidth;
-    const maxScrollLeft = carouselInner.scrollWidth - carouselInner.clientWidth;
-
-
-    if (carouselInner.scrollLeft >= maxScrollLeft) {
-      setTimeout(() => {
-        carouselInner.scrollTo({
-          left: 0,
-          behavior: 'smooth'
-        });
-      }, 200);
-    } else {
-      carouselInner.scrollBy({ left: itemWidth, behavior: 'smooth' });
-    }
-  }
-}
-
-};
-</script>

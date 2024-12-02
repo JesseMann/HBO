@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav-main">
+  <nav class="nav-main" v-if="showNavbar">
     <div class="nav-logo">
       <div>
         <router-link to="/home" class="nav-item-children"><img src="@/assets/NavBarIcons/maxLogo.webp"></router-link>
@@ -11,8 +11,8 @@
       <router-link to="/series" class="nav-item-children">Series</router-link>
     </div>
     <div class="nav-items-advanced">
-      <img src="@/assets/NavBarIcons/SearchIcon.webp">
-      <img src="@/assets/NavBarIcons/User.webp">
+      <router-link to="/search" class="search"><img src="@/assets/NavBarIcons/SearchIcon.webp"> </router-link>
+      <router-link to="/profile"><img src="@/assets/NavBarIcons/User.webp" class="user"></router-link>
     </div>
   </nav>
   <router-view/>
@@ -42,26 +42,24 @@
   margin-right: 60px;
 }
 
-.nav-items-advanced img:first-child {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+.user {
+  border-radius: 50%; 
+  transition: box-shadow 0.3s ease; 
 }
 
-.nav-items-advanced img:not(:last-child) {
+.user:hover {
+  box-shadow: 0px 0px 20px 8px rgba(255, 255, 255, 1); 
+}
+
+.search {
   opacity: 0.8;
   margin-right: 12px;
-  padding: 4px 6px;
-  pointer-events: initial;
-  text-decoration: none;
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 8px;
-  border-width: 2px;
-  outline-color: rgba(0, 0, 0, 0);
-  outline-width: 3px;
+  padding: 2px 4px;
+  border-radius: 0px;
 }
 
-
-.nav-items-advanced img:last-child {
-  padding-left: 8px;
+.search:hover {
+  opacity: 1;
 }
 
 .nav-items {
@@ -108,6 +106,116 @@
   transition: background-color .1s ease;
 }
 
+@media (max-width: 1200px) {
+  .nav-logo {
+    margin-left: 40px;
+  }
+  
+  .nav-items {
+    gap: 12px;
+  }
+  
+  .nav-items-advanced {
+    margin-right: 40px;
+  }
+
+  .nav-item-children {
+    font-size: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .nav-item-children:nth-child(2) img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-main {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+  
+  .nav-items {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .nav-items-advanced {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-item-children {
+    font-size: 14px;
+  }
+
+  .nav-item-children:nth-child(2) img {
+    height: 26px;
+  }
+
+  .search {
+    display: none;
+  }
+  .scrolled {
+    background-color: transparent!important;
+  }
+
+  .user {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-main {
+    padding: 8px;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-items {
+    gap: 8px;
+  }
+
+  .nav-items-advanced {
+    gap: 8px;
+    margin-top: 5px;
+  }
+
+  .nav-item-children {
+    font-size: 12px;
+  }
+
+  .nav-item-children:nth-child(2) img {
+    height: 20px;
+  }
+
+  .search {
+    display: none;
+  }
+  .scrolled {
+    background-color: transparent;
+  }
+
+  .user {
+    display: none;
+  }
+}
+
+
 </style>
 
 <script>
@@ -127,6 +235,15 @@ export default {
         navbar.classList.remove("scrolled");
       }
     }
+  },
+
+  computed: {
+    showNavbar() {
+      // Define routes where the navbar should not appear
+      const excludedRoutes = ['profile']; // Add other route names if needed
+      return !excludedRoutes.includes(this.$route.name);
+    }
   }
+
 }
 </script>

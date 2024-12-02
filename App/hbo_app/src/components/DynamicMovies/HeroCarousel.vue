@@ -33,153 +33,256 @@
 
 <style scoped>
 
-.container {
-display: flex;
-flex-direction: column;
-align-items: flex-start; 
-justify-content: center; 
-max-width: 50%;
-margin-left: 60px;
-position: absolute;
-bottom: 0px;
-z-index: 2;
+  .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center; 
+  max-width: 50%;
+  margin-left: 60px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+  }
+
+  .movie-view .carousel-item {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  color: white;
+  position: relative;
+  z-index: 2;
+  }
+
+  .carousel-item::before {
+  content: ""; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to top, 
+    rgba(0, 0, 0, 1) 0%, 
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 2) 10%, 
+    rgba(0, 0, 0, 1) 50%, 
+    rgba(0, 0, 0, 0) 100%   
+  );
+  pointer-events: none; 
+  z-index: -1;
+  }
+
+  .hero-logo {
+  width: 50%;
+  max-width: 50%; 
+  border-radius: 8px; 
+  margin-bottom: 20px; 
+  }
+
+  .metadata {
+  display: flex;
+  gap: 15px;
+  color: white;
+  margin-top: 20px;
+  font-family: system-ui, sans-serif; 
+  }
+
+  .watch-now-button {
+  width: 45%; 
+  min-width: 45%;
+  background-color: rgb(221, 221, 221); 
+  color: white;
+  border: 1px solid transparent;
+  padding: 14px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 20px;
+  justify-content: center;
+  }
+
+  .watch-now-button:hover {
+  background-color: rgb(255, 255, 255);
+  }
+
+  .buttonText {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+  }
+  .buttonText span {
+  margin-top: auto; 
+  font-weight: 750;
+  font-family: system-ui;
+  color: rgb(0, 0, 0);
+  letter-spacing: 1px;
+  }
+
+  .trailer-icon-row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .trailer-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  border-radius: 8px;
+  gap: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  }
+
+  .trailer-icon svg{
+  stroke: none;
+  }
+
+  .trailer-icon:hover {
+  background-color: rgba(134, 151, 206, 0.3);
+  }
+
+  .description {
+  max-width: 75%;
+  color: white;
+  margin-top: 20px;
+  line-height: 1.5; 
+  font-family: system-ui, sans-serif; 
+  text-align: left;
+  }
+
+  .genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  }
+
+  .genre {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 8px; 
+  font-size: 0.9rem;
+  }
+  
+  @media (max-width: 1200px) {
+  .carousel-item {
+    min-height: 80vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 70%;
+    margin-left: 5%;
+  }
+
+  .hero-logo {
+    width: 50%;
+  }
+
+  .metadata {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .watch-now-button {
+    width: 50%;
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+
+  .description {
+    max-width: 70%;
+    font-size: 0.9rem;
+  }
 }
 
-.movie-view .carousel-item {
-background-size: cover;
-background-position: center;
-min-height: 100vh;
-display: flex;
-align-items: center; 
-justify-content: flex-start; 
-color: white;
-position: relative;
-z-index: 2;
+@media (max-width: 768px) {
+  .carousel-item {
+    min-height: 70vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-logo {
+    width: 60%;
+  }
+
+  .metadata {
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .watch-now-button {
+    width: 70%;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+
+  .description {
+    max-width: 90%;
+    font-size: 0.85rem;
+  }
 }
 
-.carousel-item::before {
-content: ""; 
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 50%;
-background: linear-gradient(
-  to top, 
-  rgba(0, 0, 0, 1) 0%, 
-  rgba(0, 0, 0, 1) 0%,
-  rgba(0, 0, 0, 2) 10%, 
-  rgba(0, 0, 0, 1) 50%, 
-  rgba(0, 0, 0, 0) 100%   
-);
-pointer-events: none; 
-z-index: -1;
+@media (max-width: 480px) {
+  .carousel-item {
+    min-height: 60vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 100%;
+    margin-left: 5%;
+    align-items: left;
+    text-align: left;
+  }
+
+  .hero-logo {
+    width: 70%;
+  }
+
+  .metadata {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+
+  .watch-now-button {
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
 }
 
-.hero-logo {
-width: 50%;
-max-width: 50%; 
-border-radius: 8px; 
-margin-bottom: 20px; 
-}
-
-.metadata {
-display: flex;
-gap: 15px;
-color: white;
-margin-top: 20px;
-font-family: system-ui, sans-serif; 
-}
-
-.watch-now-button {
-width: 45%; 
-min-width: 45%;
-background-color: rgb(221, 221, 221); 
-color: white;
-border: 1px solid transparent;
-padding: 14px 22px;
-font-size: 1rem;
-border-radius: 8px;
-font-weight: 900;
-cursor: pointer;
-margin-top: 20px;
-justify-content: center;
-}
-
-.watch-now-button:hover {
-background-color: rgb(255, 255, 255);
-}
-
-.buttonText {
-display: flex;
-gap: 10px;
-text-align: center;
-justify-content: center;
-}
-.buttonText span {
-margin-top: auto; 
-font-weight: 750;
-font-family: system-ui;
-color: rgb(0, 0, 0);
-letter-spacing: 1px;
-}
-
-.trailer-icon-row {
-margin-top: 20px;
-display: flex;
-align-items: center;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.trailer-icon {
-cursor: pointer;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: transparent;
-color: white;
-border-color: transparent;
-border-radius: 8px;
-gap: 5px;
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 5px;
-padding-bottom: 5px;
-}
-
-.trailer-icon svg{
-stroke: none;
-}
-
-.trailer-icon:hover {
-background-color: rgba(134, 151, 206, 0.3);
-}
-
-.description {
-max-width: 75%;
-color: white;
-margin-top: 20px;
-line-height: 1.5; 
-font-family: system-ui, sans-serif; 
-text-align: left;
-}
-
-.genres {
-display: flex;
-flex-wrap: wrap;
-gap: 20px;
-margin-top: 20px;
-margin-bottom: 20px;
-text-align: left;
-}
-
-.genre {
-background-color: rgba(0, 0, 0, 0.6);
-color: white;
-border-radius: 8px; 
-font-size: 0.9rem;
-}
 
 </style>
 

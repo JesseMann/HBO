@@ -50,7 +50,6 @@ export default {
 </script>
 
 <style scoped>
-@import '@/assets/styles/global.css';
   .home {
   opacity: 0;
   transition: opacity 1s ease
