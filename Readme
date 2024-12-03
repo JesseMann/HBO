@@ -25,6 +25,8 @@ Implementation:
 5. Learning about retrieve data via API to use dynamically
 6. Learning about carousel sliding
 7. Learning about file naming and management
+8. Learning about re-useable components
+9. Learning about Vue's dynamic component options
 
 Future To Dos
 1. Minimize number of service files; make less files and have them be more re-usable
