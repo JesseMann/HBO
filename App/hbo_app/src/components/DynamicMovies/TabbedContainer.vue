@@ -72,7 +72,7 @@ export default {
 }
 
 .tabs button.active {
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
@@ -97,10 +97,41 @@ export default {
 }
 
 .tabs button::after {
-  content: ''; 
+  content: '';
 }
 
 .tab-content {
   margin-top: 20px;
 }
+
+@media (max-width: 1200px) {
+  .tabs {
+    margin-left: 40px;
+  }
+
+  .tabs button {
+    font-size: 16px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-left: 20px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .tabs button {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
 </style>

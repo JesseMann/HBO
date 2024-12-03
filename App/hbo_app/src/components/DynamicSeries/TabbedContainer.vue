@@ -102,4 +102,33 @@ export default {
 .tab-content {
   margin-top: 20px;
 }
+
+@media (max-width: 1200px) {
+  .tabs {
+    margin-left: 5%;
+  }
+
+  .tabs button {
+    font-size: 16px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-left: 5%;
+  }
+
+  .tabs button {
+    font-size: 14px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs button {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
 </style>

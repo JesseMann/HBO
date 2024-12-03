@@ -82,11 +82,11 @@ export default {
   font-family: system-ui;
   text-align: left;
   width: 50%;
+  margin-left: 5%;
 }
 
 .detail-item {
   margin-bottom: 20px;
-  margin-left: 60px;
 }
 
 .detail-item h2 {
@@ -100,5 +100,53 @@ export default {
   margin: 0;
   line-height: 20px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 1200px) {
+  .tv-details {
+    width: 70%;
+  }
+
+  .detail-item h2 {
+    font-size: 16px;
+  }
+
+  .detail-item p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tv-details {
+    width: 90%;
+    text-align: center;
+  }
+
+  .detail-item h2 {
+    font-size: 15px;
+  }
+
+  .detail-item p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tv-details {
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+  }
+
+  .detail-item h2 {
+    font-size: 14px;
+  }
+
+  .detail-item p {
+    font-size: 11px;
+    line-height: 14px;
+  }
 }
 </style>

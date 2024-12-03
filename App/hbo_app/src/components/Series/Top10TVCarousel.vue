@@ -165,6 +165,80 @@
   fill: white; 
 }
 
+@media (max-width: 1200px) {
+  .sectionName {
+    margin-left: 5%;
+    padding-left: 0px;
+    font-size: 17px;
+  }
+
+  .top10-image {
+    width: 30%;
+  }
+  .carousel-inner {
+    padding-left: 8.2%;
+    padding-right: 40px;
+    gap: 60px;
+  }
+
+  .carousel-item {
+    flex: 0 0 15%;
+    height: 250px;
+  }
+
+  .number-background {
+    top: 75%;
+    left: -50px;
+    width: 30%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionName {
+    font-size: 15px;
+  }
+  .carousel-inner {
+    padding-right: 20px;
+    gap: 40px;
+  }
+
+  .carousel-item {
+    flex: 0 0 20%;
+    height: 200px;
+  }
+
+  .number-background {
+    top: 70%;
+    left: -40px;
+    width: 25%;
+    height: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionName {
+    font-size: 13px;
+  }
+
+  .carousel-inner {
+    padding-right: 10px;
+    gap: 20px;
+  }
+
+  .carousel-item {
+    flex: 0 0 30%;
+    height: 150px;
+  }
+
+  .number-background {
+    top: 65%;
+    left: -30px;
+    width: 20%;
+    height: 20%;
+  }
+}
+
 </style>
 
 <script>

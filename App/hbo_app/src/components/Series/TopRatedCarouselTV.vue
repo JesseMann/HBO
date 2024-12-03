@@ -32,26 +32,6 @@
   font-family: system-ui;
 }
 
-.carousel::before {
-  content: ""; 
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0px;
-  height: 50%;
-  background: linear-gradient(
-    to bottom, 
-    rgba(0, 0, 0, 1) 0%, 
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 2) 10%, 
-    rgba(0, 0, 0, 1) 80%, 
-    rgba(0, 0, 0, 0) 100%   
-  );
-  pointer-events: none; 
-  z-index: -1;
-  }
-
 .sectionName {
   display: flex;
   color: white;
@@ -149,6 +129,69 @@
 .next-chevron:hover svg,
 .prev-chevron:hover svg {
   fill: white; 
+}
+
+@media (max-width: 1200px) {
+  .sectionName {
+    margin-left: 5%;
+    font-size: 17px;
+  }
+
+  .carousel-inner {
+    margin-left: 5%;
+    padding-right: 40px;
+    gap: 15px;
+    padding-left: 0px;
+  }
+
+  .carousel-item {
+    height: 240px;
+  }
+
+  .chevron svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionName {
+    font-size: 15px;
+  }
+
+  .carousel-inner {
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .carousel-item {
+    height: 200px;
+  }
+
+  .chevron svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionName {
+    font-size: 13px;
+  }
+
+  .carousel-inner {
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  .carousel-item {
+    height: 160px;
+  }
+
+  .chevron svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 </style>

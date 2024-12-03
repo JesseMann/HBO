@@ -66,7 +66,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 25%;
+  height: 38%;
   background: linear-gradient(
     to top, 
     rgba(0, 0, 0, 1) 0%, 
@@ -148,10 +148,10 @@
     padding: 12px 22px;
     font-size: 1rem;
     border-radius: 5px;
-    text-align: left; 
+    text-align: center; 
     margin-top: 10px;
     cursor: pointer;
-    width: 27%;
+    width: 40%;
     font-weight: 800;
   }
 
@@ -269,6 +269,76 @@
     position: relative;
     z-index: 100;
   }
+
+  @media (max-width: 1200px) {
+
+.heroOverview {
+  margin-left: 5%;
+  max-width: 50%;
+}
+
+.carousel::before {
+  height: 50%;
+}
+
+.responsive-iframe {
+    top: -70px;
+  }
+.indicator-bubble {
+  width: 3px;
+  height: 3px;
+  padding: 4px;
+}
+
+.heroOverview button {
+  width: 62%;
+}
+}
+
+@media (max-width: 768px) {
+
+.heroOverview {
+  max-width: 75%;
+  bottom: calc(0px); 
+  margin-left: 5%;
+}
+.responsive-iframe {
+    display: none;
+}
+
+.indicator-bubble {
+  display: none;
+}
+
+.heroOverview button {
+  width: 40%;
+}
+
+.carousel::before {
+  height: 50%;
+}
+}
+
+@media (max-width: 480px) {
+
+.heroOverview { 
+  max-width: 75%; 
+  bottom: calc(0px); 
+  margin-left: 5%; 
+}
+
+
+.indicator-bubble {
+  width: 4px;
+  height: 4px;
+  padding: 2px;
+}
+
+.heroOverview button {
+  width: 60%;
+}
+}
+
   </style>
 
 

@@ -62,7 +62,7 @@
   
   <style scoped>
   .search-results {
-    margin-top: 10%;
+    margin-top: 12%;
   }
 
   .search-results h2 {
@@ -95,5 +95,11 @@
     color: white;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 1200px) {
+  .search-results {
+    margin-top: 20%;
+  }
+}
   </style>
   

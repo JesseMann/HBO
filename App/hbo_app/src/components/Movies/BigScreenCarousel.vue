@@ -131,6 +131,71 @@
   fill: white; 
 }
 
+@media (max-width: 1200px) {
+  .sectionName {
+    margin-left: 5%;
+    
+    font-size: 17px;
+  }
+
+  .carousel-inner {
+    padding-right: 40px;
+    padding-left: 0px;
+    margin-left: 5%;
+    gap: 15px;
+  }
+
+  .carousel-item {
+    height: 240px;
+  }
+
+  .chevron svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionName {
+    font-size: 15px;
+  }
+
+  .carousel-inner {
+    padding-right: 20px;
+    gap: 10px;
+  }
+
+  .carousel-item {
+    height: 200px;
+  }
+
+  .chevron svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionName {
+    font-size: 13px;
+  }
+
+  .carousel-inner {
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  .carousel-item {
+    height: 160px;
+  }
+
+  .chevron svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
 </style>
 
 <script>

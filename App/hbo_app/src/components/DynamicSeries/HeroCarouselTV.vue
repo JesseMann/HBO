@@ -217,4 +217,106 @@ export default {
   border-radius: 8px; 
   font-size: 0.9rem;
 }
+
+@media (max-width: 1200px) {
+  .carousel-item {
+    min-height: 80vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 70%;
+    margin-left: 5%;
+  }
+
+  .hero-logo {
+    width: 50%;
+  }
+
+  .metadata {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .watch-now-button {
+    width: 50%;
+    font-size: 0.9rem;
+    padding: 12px 18px;
+  }
+
+  .description {
+    max-width: 70%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    min-height: 70vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-logo {
+    width: 60%;
+  }
+
+  .metadata {
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .watch-now-button {
+    width: 70%;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+
+  .description {
+    max-width: 90%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    min-height: 60vh;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .container {
+    max-width: 100%;
+    margin-left: 5%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-logo {
+    width: 70%;
+  }
+
+  .metadata {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8rem;
+  }
+
+  .watch-now-button {
+    width: 50%;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+}
 </style>

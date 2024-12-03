@@ -54,14 +54,14 @@
 }
 
 .carousel-item {
-  flex: 0 0 10%; 
+  flex: 0 0 10%;
   height: 280px;
-  background-size: contain; 
+  background-size: contain;
   background-position: center;
   cursor: pointer;
   position: relative;
-  border-radius: 0; 
-  background-repeat: no-repeat; 
+  border-radius: 0;
+  background-repeat: no-repeat;
   border: 2px solid transparent;
   aspect-ratio: 2 / 3;
 }
@@ -72,8 +72,8 @@
 
 .chevron {
   position: absolute;
-  top: 50%; 
-  transform: translateY(-50%); 
+  top: 50%;
+  transform: translateY(-50%);
   padding: 10px;
   cursor: pointer;
   max-height: 100vh;
@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent; 
+  background: transparent;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -100,34 +100,108 @@
 }
 
 .prev-chevron:hover {
-    background-image: linear-gradient(to right, black, transparent);
-    opacity: .5;
-    animation: fadeInBackground 0.4s forwards;
-    fill: white;
-  }
+  background-image: linear-gradient(to right, black, transparent);
+  opacity: 0.5;
+  animation: fadeInBackground 0.4s forwards;
+  fill: white;
+}
 
 .next-chevron:hover {
-    background-image: linear-gradient(to left, black, transparent);
-    opacity: .5;
-    animation: fadeInBackground 0.4s forwards;
-    fill: white;
-  }
+  background-image: linear-gradient(to left, black, transparent);
+  opacity: 0.5;
+  animation: fadeInBackground 0.4s forwards;
+  fill: white;
+}
 
 @keyframes fadeInBackground {
-    from { opacity: .5; }
-    to { opacity: 1; }
+  from {
+    opacity: 0.5;
   }
+  to {
+    opacity: 1;
+  }
+}
 
 .chevron svg {
-  width: 36px; 
+  width: 36px;
   height: 36px;
-  fill: #BABABA; 
+  fill: #bababa;
 }
 
 .next-chevron:hover svg,
 .prev-chevron:hover svg {
-  fill: white; 
+  fill: white;
 }
+
+@media (max-width: 1200px) {
+  .sectionName {
+    font-size: 17px;
+    margin-left: 40px;
+  }
+
+  .carousel-inner {
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 16px;
+  }
+
+  .carousel-item {
+    flex: 0 0 12%;
+    height: 240px;
+  }
+
+  .chevron svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionName {
+    font-size: 15px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .carousel-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 12px;
+  }
+
+  .carousel-item {
+    flex: 0 0 16%;
+    height: 200px;
+  }
+
+  .chevron svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionName {
+    font-size: 13px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .carousel-inner {
+    gap: 8px;
+  }
+
+  .carousel-item {
+    flex: 0 0 20%;
+    height: 160px;
+  }
+
+  .chevron svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 
 </style>
 

@@ -176,4 +176,72 @@ export default {
   fill: white; 
 }
 
+@media (max-width: 1200px) {
+  .sectionName {
+    font-size: 17px;
+    margin-left: 40px;
+  }
+
+  .carousel-inner {
+    padding-left: inherit;
+    margin-left: 5%;
+    gap: 16px;
+  }
+
+  .carousel-item {
+    flex: 0 0 12%;
+    height: 240px;
+  }
+
+  .chevron svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionName {
+    font-size: 15px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  .carousel-inner {
+    gap: 12px;
+  }
+
+  .carousel-item {
+    flex: 0 0 16%;
+    height: 200px;
+  }
+
+  .chevron svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionName {
+    font-size: 13px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .carousel-inner {
+    gap: 8px;
+  }
+
+  .carousel-item {
+    flex: 0 0 20%;
+    height: 160px;
+  }
+
+  .chevron svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
 </style>

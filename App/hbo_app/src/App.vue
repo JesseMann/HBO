@@ -226,21 +226,22 @@ export default {
 
   methods: {
     handleScroll() {
-      const triggerHeight = window.innerHeight * 0.8;
-      const navbar = document.querySelector(".nav-main");
+    const triggerHeight = window.innerHeight * 0.8;
+    const navbar = document.querySelector(".nav-main");
 
+    if (navbar) {
       if (window.scrollY > triggerHeight) {
         navbar.classList.add("scrolled");
       } else {
         navbar.classList.remove("scrolled");
       }
     }
-  },
+  }
+},
 
   computed: {
     showNavbar() {
-      // Define routes where the navbar should not appear
-      const excludedRoutes = ['profile']; // Add other route names if needed
+      const excludedRoutes = ['profile']; 
       return !excludedRoutes.includes(this.$route.name);
     }
   }
