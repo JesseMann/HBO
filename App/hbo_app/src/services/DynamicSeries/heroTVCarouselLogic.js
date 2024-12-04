@@ -4,8 +4,10 @@ const VIDEO_BASE_URL = "https://www.youtube.com/embed/";
 
 export async function fetchTVDetails(tvID) {
   try {
+    const API_KEY = process.env.VUE_APP_TMDB_API_KEY; 
+
     const response = await fetch(
-      `https://api.themoviedb.org/3/tv/${tvID}?api_key=cfd0f90ef11421b744113aec2cdad0fe&include_image_language=en&append_to_response=videos,images,credits`
+      `https://api.themoviedb.org/3/tv/${tvID}?api_key=${API_KEY}&include_image_language=en&append_to_response=videos,images,credits`
     );
     const tvData = await response.json();
 

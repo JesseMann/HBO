@@ -19,7 +19,9 @@
       </div>
       
       <div class="footer-right">
-        <div class="footer-info">© 2024 WarnerMedia Direct, LLC. All rights reserved.</div>
+        <div class="footer-info"> <img src="@/assets/FooterIcons/tmdblogo.svg" height="25px" width="25px">
+          <br> This webapp uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.
+        </div>
         <div class="footer-links">
           <a href="https://www.max.com/privacy" target="_blank">Privacy Policy</a>
           <a href="https://www.max.com/terms-of-use" target="_blank">Terms of Use</a>

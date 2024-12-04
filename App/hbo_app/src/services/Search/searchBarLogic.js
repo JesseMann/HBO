@@ -1,3 +1,5 @@
+const API_KEY = process.env.VUE_APP_TMDB_API_KEY;
+
 export const searchMoviesAndTV = async (query) => {
   if (!query || query.trim() === "") {
     console.warn("Search query is empty.");
@@ -7,12 +9,12 @@ export const searchMoviesAndTV = async (query) => {
   try {
     const [moviesResponse, tvResponse] = await Promise.all([
       fetch(
-        `https://api.themoviedb.org/3/search/movie?include_adult=true&api_key=cfd0f90ef11421b744113aec2cdad0fe&query=${encodeURIComponent(
+        `https://api.themoviedb.org/3/search/movie?include_adult=true&api_key=${API_KEY}&query=${encodeURIComponent(
           query
         )}&language=en-US&region=US&include_image_language=en&include_adult=true&with_original_language=en&page=1&per_page=40`
       ),
       fetch(
-        `https://api.themoviedb.org/3/search/tv?api_key=cfd0f90ef11421b744113aec2cdad0fe&query=${encodeURIComponent(
+        `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(
           query
         )}&language=en-US&include_adult=true&page=1&per_page=40`
       ),

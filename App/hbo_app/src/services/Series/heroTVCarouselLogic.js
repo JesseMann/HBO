@@ -1,10 +1,11 @@
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/original';
 const VIDEO_BASE_URL = 'https://www.youtube.com/embed/';
 const BASE_LOGO_URL = 'https://image.tmdb.org/t/p/w500/';
+const API_KEY = process.env.VUE_APP_TMDB_API_KEY;
 
 async function fetchPopularTVShows() {
     const response = await fetch(
-      `https://api.themoviedb.org/3/discover/tv?api_key=cfd0f90ef11421b744113aec2cdad0fe&language=en-US&region=US&with_origin_country=US&with_original_language=en&without_genres=35,10749&sort_by=popularity.desc&include_adult=false&page=1`
+      `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&language=en-US&region=US&with_origin_country=US&with_original_language=en&without_genres=35,10749&sort_by=popularity.desc&include_adult=false&page=1`
       );
     const data = await response.json();
     return data.results || [];
@@ -13,7 +14,7 @@ async function fetchPopularTVShows() {
   async function fetchTVTrailer(tvId) {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/tv/${tvId}?api_key=cfd0f90ef11421b744113aec2cdad0fe&append_to_response=videos,images&include_image_language=en,null`
+        `https://api.themoviedb.org/3/tv/${tvId}?api_key=${API_KEY}&append_to_response=videos,images&include_image_language=en,null`
       );
       const videoData = await response.json();
   

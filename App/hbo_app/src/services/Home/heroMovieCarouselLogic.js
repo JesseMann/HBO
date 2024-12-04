@@ -1,10 +1,11 @@
 const BASE_IMAGE_URL = 'https://image.tmdb.org/t/p/original';
 const VIDEO_BASE_URL = 'https://www.youtube.com/embed/';
-const BASE_LOGO_URL = "https://image.tmdb.org/t/p/original"
+const BASE_LOGO_URL = "https://image.tmdb.org/t/p/original";
+const API_KEY = process.env.VUE_APP_TMDB_API_KEY;
 
 async function fetchPopularMovies() {
   const response = await fetch(
-    `https://api.themoviedb.org/3/trending/movie/day?api_key=cfd0f90ef11421b744113aec2cdad0fe`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`
   );
   const data = await response.json();
   return data.results; 
@@ -12,7 +13,7 @@ async function fetchPopularMovies() {
 
 async function fetchMovieTrailer(movieId) {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=cfd0f90ef11421b744113aec2cdad0fe&include_image_language=en&append_to_response=videos,images`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&include_image_language=en&append_to_response=videos,images`
   );
   const videoData = await response.json();
   

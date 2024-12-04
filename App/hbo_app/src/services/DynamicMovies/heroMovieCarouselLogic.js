@@ -3,8 +3,10 @@ const BASE_LOGO_URL = "https://image.tmdb.org/t/p/original";
 const VIDEO_BASE_URL = "https://www.youtube.com/embed/";
 
 export async function fetchMovieDetails(movieId) {
+  const API_KEY = process.env.VUE_APP_TMDB_API_KEY;
+  
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=cfd0f90ef11421b744113aec2cdad0fe&include_image_language=en&append_to_response=videos,images,credits`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&include_image_language=en&append_to_response=videos,images,credits`
   );
   const movieData = await response.json();
 
